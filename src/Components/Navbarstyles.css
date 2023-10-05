@@ -1,0 +1,150 @@
+.NavbarItems{
+    background-color: white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width:95%;
+    height:80px;
+    border-radius: 13px;
+    position: fixed;
+    top:20px;
+    left:50%;
+    transform: translate(-50%);
+    z-index:9999;
+}
+
+.navbar-logo{
+    color:#222;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+    grid-gap: 14px;
+    list-style: none;
+    align-items: center;
+    
+}
+
+.nav-links{
+    text-decoration: none;
+    color:#222;
+    font-size: 1.2rem;
+    font-weight: 600px;
+    padding:0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.nav-links i{
+    padding-right: 10px;
+
+}
+
+.nav-links:hover{
+    background-color: black;
+    color:cyan;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-links-mobile{
+    display: none;
+}
+
+
+button{
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+}
+
+button:hover{
+    background-color: black;
+    color:cyan;
+    transition: all 0.2s ease-in-out;
+    cursor:pointer;
+}
+
+.menu-icons{
+    display: none;
+    cursor:pointer;
+}
+
+@media screen and (max-width:850px){
+    .NavbarItems{
+        z-index:99;
+    }
+
+    .menu-icons{
+        display: block;
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        background-color: white;
+        width: 100%;
+        height:auto;
+        position: absolute;
+        top:0;
+        right:-100%;
+        opacity:0;
+        align-items: stretch;
+        padding:80px 0 30px 0;
+        margin:0;
+        transition:0.3s ease-in-out;
+        border-radius: 13px;
+    }
+
+    .nav-menu.active{
+        right:0;
+        opacity:1;
+        z-index:-1; 
+        transition:0.3s ease-in-out;
+ 
+    }
+    
+
+    .nav-links{
+        display: block;
+        color:black;
+        width:100%;
+        font-size: 1.2rem;
+        padding:2rem 0;
+    }
+
+    .nav-links:hover{
+        background-color: white;
+        color:green;
+        transition: 0.2s all ease-in-out;
+    }
+
+    button{
+        display: none;
+    }
+
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        padding:1.5rem;
+        margin:auto;
+        border-radius:4px;
+        width:80%;
+        background-color: black;
+        color:darkorange;
+        text-decoration:none;
+        font-size:1.2rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    
+}
